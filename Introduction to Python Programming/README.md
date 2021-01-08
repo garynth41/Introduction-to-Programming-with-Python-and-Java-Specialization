@@ -16,9 +16,8 @@ SKILLS GAINED
 * Python Programming
 * Computer Programming
 
-# Brandon Krakowsky
-* Lecturer
-* School of Engineering and Applied Science
+# Instructor
+* Brandon Krakowsky, Lecturer, School of Engineering and Applied Science
 
 # University of Pennsylvania
 The University of Pennsylvania (commonly referred to as Penn) is a private university, located in Philadelphia, Pennsylvania, United States. A member of the Ivy League, Penn is the fourth-oldest institution of higher education in the United States, and considers itself to be the first university in the United States with both undergraduate and graduate studies.
