@@ -1,0 +1,1217 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "95ba96b54a07732db3c3cfc856a56929",
+     "grade": false,
+     "grade_id": "cell-37b1bbf6f43609e8",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "## Math Practice"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "77018115496cacf0356230ab81911955",
+     "grade": true,
+     "grade_id": "init",
+     "locked": true,
+     "points": 0,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "#########################################################\n",
+    "### EXECUTE THIS CELL BEFORE YOU  TEST YOUR SOLUTIONS ###\n",
+    "#########################################################\n",
+    "\n",
+    "import imp\n",
+    "sol = imp.load_compiled(\"sol\", \"./sol.py\")\n",
+    "from nose.tools import assert_equal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "40a72379b37d2851d912a2e9c9374c1d",
+     "grade": false,
+     "grade_id": "cell-3594098eb67312d9",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the result of 3.93 multiplied by 4901 and save it in a variable named 'q1', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "deletable": false,
+    "name": "multiply",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "e3d18f98339b2956d3e5e8426a0aa9f6",
+     "grade": false,
+     "grade_id": "q1",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "19260.93\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "x = 3.93\n",
+    "y = 4901\n",
+    "q1 = x * y\n",
+    "print(q1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "c456c4a3c5152ab5fdd85a56cbab22c3",
+     "grade": true,
+     "grade_id": "q1_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "# Note: All test cases are read-only\n",
+    "\n",
+    "assert_equal(q1, sol.q1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "79991ddabaf88cf8b3cadb898886887d",
+     "grade": false,
+     "grade_id": "cell-bec63c467b3c20c4",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the result of 215 divided by 6 and save it in a variable named 'q2', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "deletable": false,
+    "name": "divide",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "ceb1893a9b1abb179e963591397f3201",
+     "grade": false,
+     "grade_id": "q2",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "35.833333333333336\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "a = 215\n",
+    "b = 6\n",
+    "\n",
+    "q2 = a/b\n",
+    "print(q2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "6c99a34be4596081466d7f4f5ae5bd6a",
+     "grade": true,
+     "grade_id": "q2_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q2, sol.q2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "7572c89cccdb5f86089bebd51e9bc9b4",
+     "grade": false,
+     "grade_id": "cell-5488aab72fc3cec3",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the result of 3 divided by 0.3 and save it in a variable named 'q3', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "deletable": false,
+    "name": "integer_divide",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "607420d4cafa29185233ff0f8326a32f",
+     "grade": false,
+     "grade_id": "q3",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "e = 3\n",
+    "f = 0.3\n",
+    "q3 = e/f\n",
+    "print(q3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "7b3e6d4b5caf19dab0df0cd56d862856",
+     "grade": true,
+     "grade_id": "q3_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q3, sol.q3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "7d729b6ea0603fbbb1ad7868b2583d6f",
+     "grade": false,
+     "grade_id": "cell-efdaaf59afc25d2d",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the remainder of 215 divided by 6 and save it in a variable named 'q4', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "deletable": false,
+    "name": "modulo",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "2b77aeb70cfac033cf14f5858bfe843e",
+     "grade": false,
+     "grade_id": "q4",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "x1 = 215\n",
+    "y1 = 6\n",
+    "\n",
+    "q4 = x1%y1\n",
+    "print(q4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "4272a8fd6a2f8a8d4403b2969f8d0858",
+     "grade": true,
+     "grade_id": "q4_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q4, sol.q4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "7f0a9760b01f3b51e71d9f683af102bb",
+     "grade": false,
+     "grade_id": "cell-8896e1042dd06e48",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the value of 9 raised to the 12th power and save it in a variable named 'q5', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "deletable": false,
+    "name": "exponentiation",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "15e0f8a14ea727bb7297874014e16161",
+     "grade": false,
+     "grade_id": "q5",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "282429536481\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "q5 = 9**12\n",
+    "print(q5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "771f366f47c17422558ec9247dee524a",
+     "grade": true,
+     "grade_id": "q5_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q5, sol.q5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "5aa4851acc1911d1466c2992252176a9",
+     "grade": false,
+     "grade_id": "cell-0139553c89cf0f53",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the nearest integer of 3.5 (convert 3.5 to an integer) and save it in a variable named 'q6', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "deletable": false,
+    "name": "rounding",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "2dd6e109a33eba2cc3aa76b2d8f6dd1c",
+     "grade": false,
+     "grade_id": "q6",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "q6 = int(3.5)\n",
+    "print(q6)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "7c08d5fe23f3bd60ecd71124e433e9cc",
+     "grade": true,
+     "grade_id": "q6_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q6, sol.q6)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "c604dd5cad712a61afc86df6842dcd72",
+     "grade": false,
+     "grade_id": "cell-3ab3e40f63c085a0",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "## Data Types Practice"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "08bb92d342f45e05b234a8699c97d206",
+     "grade": false,
+     "grade_id": "cell-e12417f1cbcb557b",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the data type of `\"False\"` (notice the **quotes** around the word False!) and save it in a variable named 'q7', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {
+    "deletable": false,
+    "name": "type_string",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "2fd5d79f12e1d63a62de33451c6582f8",
+     "grade": false,
+     "grade_id": "q7",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'str'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "#q7 = 5 < 3\n",
+    "q7 = \"False\"\n",
+    "\n",
+    "print(type(q7))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "7b8cdd959ee7fae21fb116048b546ee3",
+     "grade": true,
+     "grade_id": "q7_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "AssertionError",
+     "evalue": "'False' != <class 'str'>",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAssertionError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-34-9da29e723c73>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;31m##########################\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m \u001b[0massert_equal\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mq7\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msol\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mq7\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/case.py\u001b[0m in \u001b[0;36massertEqual\u001b[0;34m(self, first, second, msg)\u001b[0m\n\u001b[1;32m    850\u001b[0m         \"\"\"\n\u001b[1;32m    851\u001b[0m         \u001b[0massertion_func\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_getAssertEqualityFunc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 852\u001b[0;31m         \u001b[0massertion_func\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    853\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    854\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0massertNotEqual\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/case.py\u001b[0m in \u001b[0;36m_baseAssertEqual\u001b[0;34m(self, first, second, msg)\u001b[0m\n\u001b[1;32m    843\u001b[0m             \u001b[0mstandardMsg\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'%s != %s'\u001b[0m \u001b[0;34m%\u001b[0m \u001b[0m_common_shorten_repr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    844\u001b[0m             \u001b[0mmsg\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_formatMessage\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mstandardMsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 845\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mfailureException\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    846\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    847\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0massertEqual\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mAssertionError\u001b[0m: 'False' != <class 'str'>"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q7, sol.q7)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "3f79a7a78600104ce41aaa9f53d7155e",
+     "grade": false,
+     "grade_id": "cell-cbcb6f6b2e179233",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the data type of True and save it in a variable named 'q8', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {
+    "deletable": false,
+    "name": "type_bool",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "9642ec668e512b9645065b565b9ea6e8",
+     "grade": false,
+     "grade_id": "q8",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "q8 = 6 > 5\n",
+    "print(type(q8))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "31b06ea3db73ee6cb03aa7463af33285",
+     "grade": true,
+     "grade_id": "q8_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "AssertionError",
+     "evalue": "True != <class 'bool'>",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAssertionError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-37-549ba3f3710d>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;31m##########################\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m \u001b[0massert_equal\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mq8\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msol\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mq8\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/case.py\u001b[0m in \u001b[0;36massertEqual\u001b[0;34m(self, first, second, msg)\u001b[0m\n\u001b[1;32m    850\u001b[0m         \"\"\"\n\u001b[1;32m    851\u001b[0m         \u001b[0massertion_func\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_getAssertEqualityFunc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 852\u001b[0;31m         \u001b[0massertion_func\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    853\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    854\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0massertNotEqual\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/case.py\u001b[0m in \u001b[0;36m_baseAssertEqual\u001b[0;34m(self, first, second, msg)\u001b[0m\n\u001b[1;32m    843\u001b[0m             \u001b[0mstandardMsg\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'%s != %s'\u001b[0m \u001b[0;34m%\u001b[0m \u001b[0m_common_shorten_repr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    844\u001b[0m             \u001b[0mmsg\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_formatMessage\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mstandardMsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 845\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mfailureException\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    846\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    847\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0massertEqual\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mAssertionError\u001b[0m: True != <class 'bool'>"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q8, sol.q8)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "263d09674fc5cc0b73ac76953267386e",
+     "grade": false,
+     "grade_id": "cell-d27bf796ebe6da39",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Calculate the data type of the result of 1000 divided by 10 and save it in a variable named 'q9', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {
+    "deletable": false,
+    "name": "type_float",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "e9ad565ff1f88a964bb095e8ef9d5e9b",
+     "grade": false,
+     "grade_id": "q9",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "100\n",
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "\n",
+    "q9 = 1000//10\n",
+    "print(q9)\n",
+    "\n",
+    "print(type(q9))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "530e367caab535cf51fca19c412acff7",
+     "grade": true,
+     "grade_id": "q9_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "AssertionError",
+     "evalue": "100 != <class 'float'>",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAssertionError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-46-68fc831a4d77>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;31m##########################\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m \u001b[0massert_equal\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mq9\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msol\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mq9\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/case.py\u001b[0m in \u001b[0;36massertEqual\u001b[0;34m(self, first, second, msg)\u001b[0m\n\u001b[1;32m    850\u001b[0m         \"\"\"\n\u001b[1;32m    851\u001b[0m         \u001b[0massertion_func\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_getAssertEqualityFunc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 852\u001b[0;31m         \u001b[0massertion_func\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    853\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    854\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0massertNotEqual\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/case.py\u001b[0m in \u001b[0;36m_baseAssertEqual\u001b[0;34m(self, first, second, msg)\u001b[0m\n\u001b[1;32m    843\u001b[0m             \u001b[0mstandardMsg\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'%s != %s'\u001b[0m \u001b[0;34m%\u001b[0m \u001b[0m_common_shorten_repr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    844\u001b[0m             \u001b[0mmsg\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_formatMessage\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mstandardMsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 845\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mfailureException\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    846\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    847\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0massertEqual\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfirst\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msecond\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mAssertionError\u001b[0m: 100 != <class 'float'>"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q9, sol.q9)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "c806e99e1d3a4dec781c9cc789187f5f",
+     "grade": false,
+     "grade_id": "cell-916a113950ea490f",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Cast the value of 6.3 divided by 3.8 to an integer. Save it in a variable named 'q10', then print it out."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {
+    "deletable": false,
+    "name": "int_rounding",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "500fa2981cec73308f4a1d653688b467",
+     "grade": false,
+     "grade_id": "q10",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "g = 6.3\n",
+    "h = 3.8 \n",
+    "\n",
+    "x = g/h\n",
+    "\n",
+    "q10 = int(x)\n",
+    "\n",
+    "\n",
+    "print(type(q10))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "4c9c8ddff216a53f901dfb82d4e4fea8",
+     "grade": true,
+     "grade_id": "q10_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q10, sol.q10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "5887d254aa59c8da43930ba57d0635b9",
+     "grade": false,
+     "grade_id": "cell-6ffb6c072b2adcb3",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "## String Practice"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "9be558e94f3f8c769e04478f69200f6f",
+     "grade": false,
+     "grade_id": "cell-6553b20e0e5b9f47",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Concatenate the strings 'James', 'Brian', and 'Patrick' - store the result in a variable called 'q11', then print it out. Make sure to add a single empty space between the names!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "metadata": {
+    "deletable": false,
+    "name": "print_str_list",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "5a443e417dacc47504d941c2cdcc1b42",
+     "grade": false,
+     "grade_id": "q11",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "James Brian Patrick\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "q11 = \"James\" + ' ' + \"Brian\" + ' ' + \"Patrick\"\n",
+    "print(q11)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "4e5e7a10d93484a8f1d63a98349e5cec",
+     "grade": true,
+     "grade_id": "q11_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q11, sol.q11)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "a8f98a27856863e4947321600b9084bd",
+     "grade": false,
+     "grade_id": "cell-f29b70434b50fb59",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Make the following string correct, storing it in a variable named 'q12':<br />\n",
+    "`q12 = \"4 % 2 = \" + (4 % 2))`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {
+    "deletable": false,
+    "name": "print_str_calc",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "1428b4ad76506f0f3dc3cf9adc1a9c1e",
+     "grade": false,
+     "grade_id": "q12",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4 % 2 = 0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "q12 = '4 % 2 = ' + str(4 % 2)\n",
+    "\n",
+    "print(q12)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "958956e76f12d334eb6cd33c544aaf21",
+     "grade": true,
+     "grade_id": "q12_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q12, sol.q12)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "2ba166b158e0bbdee8d6aa96eb3d72f0",
+     "grade": false,
+     "grade_id": "cell-f8a8772682445732",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Save the following quote, (including the double quotes), in a variable called 'q13', then print it:<br />\n",
+    "Albert Einstein's best quote is \"I have no special talent. I am only passionately curious.\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {
+    "deletable": false,
+    "name": "print_str_escape",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "81458c05dbcaf2509ea099e0ca1d7d62",
+     "grade": false,
+     "grade_id": "q13",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Albert Einstein's best quote is \"I have no special talent. I am only passionately curious.\"\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "q13 = 'Albert Einstein\\'s best quote is \"I have no special talent. I am only passionately curious.\"'\n",
+    "print(q13)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "f62cdacb98670278edfcd811af50a910",
+     "grade": true,
+     "grade_id": "q13_test",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "assert_equal(q13, sol.q13)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
