@@ -1,0 +1,684 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "154f81026f072af580cc46b9513afb32",
+     "grade": false,
+     "grade_id": "cell-37b1bbf6f43609e8",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "## “How Old is Your Dog in Human Years?” Calculator\n",
+    "\n",
+    "In this assignment, you will write a program that calculates a dog’s age in human years.\n",
+    "The program will prompt the user for an age in dog years and calculate that age in human years.\n",
+    "Allow for int or float values, but check the user’s input to make sure it's valid -- it should be numeric and positive.\n",
+    "Otherwise, let the user know their input is not valid.\n",
+    "\n",
+    "You can use the following rules to approximately convert a medium-sized dog’s age to human years:\n",
+    "- For the first year, one dog year is equal to 15 human years\n",
+    "- For the first 2 years, each dog year is equal to 12 human years\n",
+    "- For the first 3 years, each dog year is equal to 9.3 human years\n",
+    "- For the first 4 years, each dog year is equal to 8 human years\n",
+    "- For the first 5 years, each dog year is equal to 7.2 human years\n",
+    "- After that, each dog year is equal to 7 human years.  (Note: This means the first 5 dog years are\n",
+    "equal to 36 human years (5 * 7.2) and the remaining dog years are equal to 7 human years each.)\n",
+    "\n",
+    "Print the result in the following format, substituting for **dog_age** and **human_age**: \"The given dog age **dog_age**\n",
+    "is **human_age** in human years.\"  Round the result to 2 decimal places.  Note: If there is a 0 in the hundredths place,\n",
+    "you can drop it, e.g. 24.00 can be displayed as 24.0."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "72eb13f1c11b5b3cd7ce48f3d308dbfe",
+     "grade": false,
+     "grade_id": "cell-0c0dc63d680400fc",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "source": [
+    "Considering invalid inputs:\n",
+    "* Your program must ask the user for an age in dog years - hint: use the input() function\n",
+    "* We are going to test invalid inputs - make sure that your code can handle negative value inputs and non-numerical inputs!\n",
+    "* For invalid inputs, make sure that your printed response adheres to the following:\n",
+    " - If a text-based input is provided, make sure your response contains the word 'invalid'.  \n",
+    " - If a negative input is provided, make sure your response contains the word 'negative'.  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {
+    "deletable": false,
+    "name": "multiply",
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "986d0c9a7169aefd54471412846011cb",
+     "grade": false,
+     "grade_id": "dog",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Input dog years: 6\n",
+      "The given dog age 6.0 is 43.0 in human years.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#### import traceback\n",
+    "\n",
+    "def calculator():\n",
+    "    \n",
+    "    # Get dog age\n",
+    "    age = float(input(\"Input dog years: \"))\n",
+    "\n",
+    "    try:\n",
+    "        # Cast to float\n",
+    "        d_age = float(age) \n",
+    "       \n",
+    "        # If user enters negative number, print message\n",
+    "        if (age < 0):\n",
+    "            print('Your input: ' + str(age) + ' is negative')\n",
+    "       \n",
+    "        # Otherwise, calculate dog's age in human years\n",
+    "        # your code here\n",
+    "        \n",
+    "        elif(age <= 1.0):\n",
+    "            d_age = 15\n",
+    "        elif(age <= 2): \n",
+    "            d_age = age * 12\n",
+    "        elif(age <= 3):\n",
+    "            d_age = age * 9.3\n",
+    "        elif(age <= 4):\n",
+    "            d_age = age * 8\n",
+    "        elif(age <= 5):\n",
+    "            d_age = age * 7.2\n",
+    "        elif (age > 5.00):\n",
+    "            d_age = (5 * 7.2) + ((age - 5) * 7)\n",
+    "            \n",
+    "        d_age = round(d_age, 2)\n",
+    "        \n",
+    "        print(\"The given dog age {} is {} in human years.\".format(age, d_age))\n",
+    "        \n",
+    "    except:\n",
+    "        print(age, \"is an invalid age.\")\n",
+    "        print(traceback.format_exc())\n",
+    "    \n",
+    "calculator()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "ae8eea7bc9abe95c0bc73823e642acab",
+     "grade": true,
+     "grade_id": "init_test",
+     "locked": true,
+     "points": 0,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: nose in /opt/conda/lib/python3.7/site-packages (1.3.7)\n",
+      "\u001b[33mWARNING: You are using pip version 20.2.3; however, version 21.0 is available.\n",
+      "You should consider upgrading via the '/opt/conda/bin/python3 -m pip install --upgrade pip' command.\u001b[0m\n"
+     ]
+    }
+   ],
+   "source": [
+    "###########################################################\n",
+    "##### EXECUTE THIS CELL BEFORE YOU TEST YOUR SOLUTIONS ####\n",
+    "###########################################################\n",
+    "!pip install nose\n",
+    "import os, sys, re\n",
+    "import unittest\n",
+    "from unittest.mock import patch\n",
+    "from unittest import TestCase\n",
+    "from nose.tools import assert_equal, assert_true, assert_almost_equal\n",
+    "from importlib import reload\n",
+    "from io import StringIO\n",
+    "\n",
+    "class RedirectStdStreams(object):\n",
+    "    def __init__(self, stdout=None, stderr=None):\n",
+    "        self._stdout = stdout or sys.stdout\n",
+    "        self._stderr = stderr or sys.stderr\n",
+    "\n",
+    "    def __enter__(self):\n",
+    "        self.old_stdout, self.old_stderr = sys.stdout, sys.stderr\n",
+    "        self.old_stdout.flush(); self.old_stderr.flush()\n",
+    "        sys.stdout, sys.stderr = self._stdout, self._stderr\n",
+    "\n",
+    "    def __exit__(self, exc_type, exc_value, traceback):\n",
+    "        self._stdout.flush(); self._stderr.flush()\n",
+    "        sys.stdout = self.old_stdout\n",
+    "        sys.stderr = self.old_stderr\n",
+    "        \n",
+    "def parse_dog_age(msg):\n",
+    "    human_age = re.findall(\"\\d+\\.\\d+ in human\", msg)\n",
+    "    human_age = human_age[0].split(' ')[0].strip()\n",
+    "    return float(human_age)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "207172f0b6a1c477851b5a5b3abed169",
+     "grade": true,
+     "grade_id": "test_negative",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'Your input: -1.0 is negative\n",
+      "The given dog age -1.0 is -1.0 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='-1')\n",
+    "def test_negative(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_negative(-1)))    \n",
+    "assert_true('negative' in test_negative(-1), \"Make sure negative inputs print out a message containing the word negative!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "335f7e97968c00b78d023675f3ab5b15",
+     "grade": true,
+     "grade_id": "test_invalid",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "could not convert string to float: 'n'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-46-c193cb033d9b>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m     10\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgetvalue\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 12\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Received the below output from your program:\\n---------------\\n'{}'\"\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mformat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtest_text_input\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'n'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     13\u001b[0m \u001b[0massert_true\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'invalid'\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mtest_text_input\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'n'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m\"Make sure text inputs print out a message containing the word invalid!\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/opt/conda/lib/python3.7/unittest/mock.py\u001b[0m in \u001b[0;36mpatched\u001b[0;34m(*args, **keywargs)\u001b[0m\n\u001b[1;32m   1253\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1254\u001b[0m                 \u001b[0margs\u001b[0m \u001b[0;34m+=\u001b[0m \u001b[0mtuple\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mextra_args\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1255\u001b[0;31m                 \u001b[0;32mreturn\u001b[0m \u001b[0mfunc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkeywargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1256\u001b[0m             \u001b[0;32mexcept\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1257\u001b[0m                 if (patching not in entered_patchers and\n",
+      "\u001b[0;32m<ipython-input-46-c193cb033d9b>\u001b[0m in \u001b[0;36mtest_text_input\u001b[0;34m(self, mock_input)\u001b[0m\n\u001b[1;32m      7\u001b[0m     \u001b[0mf\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mStringIO\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m     \u001b[0;32mwith\u001b[0m \u001b[0mRedirectStdStreams\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mstdout\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mstderr\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m         \u001b[0mcalculator\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     10\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgetvalue\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m<ipython-input-43-1568084e7f83>\u001b[0m in \u001b[0;36mcalculator\u001b[0;34m()\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m     \u001b[0;31m# Get dog age\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 6\u001b[0;31m     \u001b[0mage\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Input dog years: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      7\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m     \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mValueError\u001b[0m: could not convert string to float: 'n'"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='n')\n",
+    "def test_text_input(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_text_input('n')))    \n",
+    "assert_true('invalid' in test_text_input('n'), \"Make sure text inputs print out a message containing the word invalid!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "7570953e55891118420b8d6dcad49815",
+     "grade": true,
+     "grade_id": "test_1",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 1.0 is 15 in human years.\n",
+      "'\n"
+     ]
+    },
+    {
+     "ename": "IndexError",
+     "evalue": "list index out of range",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-47-71f7003149ee>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m     13\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Received the below output from your program:\\n---------------\\n'{}'\"\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mformat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtest_one\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     14\u001b[0m assert_almost_equal(\n\u001b[0;32m---> 15\u001b[0;31m     \u001b[0mparse_dog_age\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtest_one\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     16\u001b[0m     \u001b[0;36m15\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     17\u001b[0m     \u001b[0;31m\"\u001b[0m\u001b[0mExpected\u001b[0m \u001b[0ma\u001b[0m \u001b[0;36m1\u001b[0m \u001b[0myear\u001b[0m \u001b[0mold\u001b[0m \u001b[0mdog\u001b[0m \u001b[0mto\u001b[0m \u001b[0mbe\u001b[0m \u001b[0;36m15\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mhuman\u001b[0m \u001b[0myears\u001b[0m\u001b[0;34m.\u001b[0m \u001b[0mMake\u001b[0m \u001b[0msure\u001b[0m \u001b[0myour\u001b[0m \u001b[0mprint\u001b[0m \u001b[0mstatement\u001b[0m \u001b[0;32mis\u001b[0m \u001b[0mformatted\u001b[0m \u001b[0;32mas\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;31m\\\u001b[0m\u001b[0mn\u001b[0m\u001b[0;31m\\\u001b[0m\u001b[0mt\u001b[0m\u001b[0;31m \u001b[0m\u001b[0;31m\\\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m<ipython-input-44-afa68f6a5b16>\u001b[0m in \u001b[0;36mparse_dog_age\u001b[0;34m(msg)\u001b[0m\n\u001b[1;32m     28\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0mparse_dog_age\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     29\u001b[0m     \u001b[0mhuman_age\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mre\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mfindall\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"\\d+\\.\\d+ in human\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmsg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 30\u001b[0;31m     \u001b[0mhuman_age\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mhuman_age\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msplit\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m' '\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstrip\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     31\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mhuman_age\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='1')\n",
+    "def test_one(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "    \n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_one(1)))    \n",
+    "assert_almost_equal(\n",
+    "    parse_dog_age(test_one(1)), \n",
+    "    15, \n",
+    "    \"Expected a 1 year old dog to be 15 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "545a1a9c68b3d9fa61185e20e5b3ce2d",
+     "grade": true,
+     "grade_id": "test_2",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 2.0 is 24.0 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='2')\n",
+    "def test_two(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_two(2)))    \n",
+    "assert_almost_equal(parse_dog_age(test_two(2)), 24, \n",
+    "    \"Expected a 2 year old dog to be 24 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "0c9223c2ecb2f2912183f7269c75a497",
+     "grade": true,
+     "grade_id": "test_3",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 3.0 is 27.9 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='3')\n",
+    "def test_three(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "    \n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_three(3)))    \n",
+    "assert_almost_equal(parse_dog_age(test_three(3)), 27.9,\n",
+    "            \"Expected a 3 year old dog to be 27.9 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "fd06b15a3d9806f76055a4db12d68faf",
+     "grade": true,
+     "grade_id": "test_4",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 4.0 is 32.0 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='4')\n",
+    "def test_four(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_four(4)))    \n",
+    "assert_almost_equal(parse_dog_age(test_four(4)), 32,\n",
+    "            \"Expected a 4 year old dog to be 32.0 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "fb3f8d3daa9b5edc212ec7385c7d2602",
+     "grade": true,
+     "grade_id": "test_5",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 5.0 is 36.0 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='5')\n",
+    "def test_five(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "    \n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_five(5)))    \n",
+    "assert_almost_equal(parse_dog_age(test_five(5)), 36,\n",
+    "            \"Expected a 5 year old dog to be 36.0 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "64e1e124c1c433f6383d2f1a01c7efaa",
+     "grade": true,
+     "grade_id": "test_6",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 6.0 is 43.0 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='6')\n",
+    "def test_six(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_six(6)))    \n",
+    "assert_almost_equal(parse_dog_age(test_six(6)), 43,\n",
+    "            \"Expected a 6 year old dog to be 43.0 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "0f363471eb82130889f76ef3d2a12c28",
+     "grade": true,
+     "grade_id": "test_7",
+     "locked": true,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false,
+     "task": false
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Received the below output from your program:\n",
+      "---------------\n",
+      "'The given dog age 7.0 is 50.0 in human years.\n",
+      "'\n"
+     ]
+    }
+   ],
+   "source": [
+    "##########################\n",
+    "### TEST YOUR SOLUTION ###\n",
+    "##########################\n",
+    "\n",
+    "@patch('builtins.input', return_value='7')\n",
+    "def test_seven(self, mock_input):\n",
+    "    f = StringIO()\n",
+    "    with RedirectStdStreams(stdout=f, stderr=f):\n",
+    "        calculator()\n",
+    "    return str(f.getvalue())\n",
+    "\n",
+    "print(\"Received the below output from your program:\\n---------------\\n'{}'\".format(test_seven(7)))\n",
+    "assert_almost_equal(parse_dog_age(test_seven(7)), 50.0,\n",
+    "            \"Expected a 7 year old dog to be 50.0 in human years. Make sure your print statement is formatted as:\\n\\t \\\n",
+    "    'The given dog age <input_value> is <calculated_age> in human years.'\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
