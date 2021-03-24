@@ -1,1 +1,1 @@
-Wk 1 coursework
+Wk 1 course work
